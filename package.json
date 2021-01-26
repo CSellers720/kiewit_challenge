@@ -1,0 +1,39 @@
+{
+  "name": "kiewit_challenge",
+  "version": "1.0.0",
+  "description": "Prelim. coding challenge",
+  "main": "./server/index.js",
+  "scripts": {
+    "start": "nodemon ./server/index.js",
+    "db": "json-server --watch ./mock-db/data.json",
+    "build": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSellers720/kiewit_challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CSellers720/kiewit_challenge/issues"
+  },
+  "homepage": "https://github.com/CSellers720/kiewit_challenge#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "json-server": "^0.16.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.18.0"
+  }
+}
