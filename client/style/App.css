@@ -1,5 +1,5 @@
 .appDiv {
-  height: 100%;
+  height: 200px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
 
 .appWrapper {
   margin-top: 50px;
-  height: 200px;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
