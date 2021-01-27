@@ -16,7 +16,8 @@ const Form = ({
         // setResults(data);
       })
       .catch((err) => {
-        console.log(err);
+        // eslint-disable-next-line no-console
+        console.log('ERROR while making a get request during form submission', err);
       });
   };
 
