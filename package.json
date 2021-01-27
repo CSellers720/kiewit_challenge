@@ -5,8 +5,11 @@
   "main": "./server/index.js",
   "scripts": {
     "start": "nodemon ./server/index.js",
-    "db": "json-server --watch ./mock-db/data.json",
     "build": "webpack -w -c webpack.config.js"
+  },
+  "engines": {
+    "node": "15.5.1",
+    "npm": "*"
   },
   "repository": {
     "type": "git",
