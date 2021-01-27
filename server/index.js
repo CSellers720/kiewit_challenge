@@ -19,7 +19,7 @@ app.get('/get', (req, res) => {
   }
 });
 
-app.listen(process.env.PORT || PORT, 'localhost', (err) => {
+app.listen(process.env.PORT, '0.0.0.0', (err) => {
   if (err) {
     console.log('Error at server/index.js: listener');
   } else {
