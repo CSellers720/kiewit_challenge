@@ -10,6 +10,36 @@
   background-color: rgb(186, 202, 218);
 }
 
+.animateEmployee {
+  animation: fadeIn .3s ease 0s 1 forwards normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.animateExit {
+  animation: exit .3s ease 0s 1 forwards normal;
+}
+
+@keyframes exit {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+}
+
 .displayWrapper {
   margin-top: 20px;
   align-self: center;
