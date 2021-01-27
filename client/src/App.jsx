@@ -8,7 +8,6 @@ const App = () => {
   const [ageFilter, setAgeFilter] = useState('');
   const [results, setResults] = useState([]);
 
-
   return (
     <div className="appWrapper">
       <div className="appDiv">
