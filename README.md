@@ -1,4 +1,6 @@
 # Kiewit Employee Data Explorer
+## To simply view the deployed page, visit [this URL!](http://employee-data99.herokuapp.com/)
+
 This application was created to retrieve and display employee records. It supports searching for employees by name, as well as filtering by department and/or age.
 
 ## Setup
