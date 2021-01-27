@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 
 const Form = ({
-  setAgeFilter, setDptFilter, setResults
+  setAgeFilter, setDptFilter, setResults,
 }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,6 +20,23 @@ const Form = ({
         console.log('ERROR while making a get request during form submission', err);
       });
   };
+
+  useEffect(() => {
+    axios.get('/get', {
+      params: {
+        age: 0,
+        department: '',
+        name: '',
+      },
+    })
+      .then((data) => {
+        setResults(data.data);
+      })
+      .catch((err) => {
+      // eslint-disable-next-line no-console
+        console.log('ERROR while making a get request during form submission', err);
+      });
+  }, []);
 
   return (
     <div className="formDiv" onSubmit={(e) => handleSubmit(e)}>
