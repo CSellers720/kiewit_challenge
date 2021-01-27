@@ -4,8 +4,8 @@
   "description": "Prelim. coding challenge",
   "main": "./server/index.js",
   "scripts": {
-    "start": "nodemon ./server/index.js",
-    "build": "webpack -w -c webpack.config.js"
+    "start": "node ./server/index.js",
+    "build": "webpack -c webpack.config.js"
   },
   "engines": {
     "node": "15.5.1",
