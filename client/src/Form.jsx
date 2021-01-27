@@ -1,10 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import axios from 'axios';
 
-const Form = (props) => {
-  const { setNameQuery, setDptFilter, setAgeFilter } = props.setters;
+const Form = ({
+  setAgeFilter, setDptFilter, setResults
+}) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const params = {};
+    params.name = e.target[0].value;
+    setDptFilter(e.target[1].value);
+    setAgeFilter(Number(e.target[2].value));
+    axios.get('/get', { params })
+      .then((data) => {
+        setResults(data.data);
+        // setResults(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
-    <div className="formDiv">
+    <div className="formDiv" onSubmit={(e) => handleSubmit(e)}>
       <form className="myForm">
         <label htmlFor="name">
           Name:
@@ -12,7 +29,6 @@ const Form = (props) => {
             className="input"
             type="text"
             name="name"
-            onChange={(e) => setNameQuery(e.target.value)}
           />
         </label>
         <label htmlFor="dpt">
@@ -21,19 +37,17 @@ const Form = (props) => {
             className="input"
             type="text"
             name="dpt"
-            onChange={(e) => setDptFilter(e.target.value)}
           />
         </label>
         <label htmlFor="age">
           Age:
           <input
             className="input"
-            type="text"
+            type="number"
             name="age"
-            onChange={(e) => setAgeFilter(e.target.value)}
           />
         </label>
-
+        <input type="submit" value="Submit" />
       </form>
     </div>
   );
