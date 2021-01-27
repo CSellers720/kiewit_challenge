@@ -19,8 +19,9 @@
   },
   "homepage": "https://github.com/CSellers720/kiewit_challenge#readme",
   "dependencies": {
-    "json-server": "^0.16.3",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
