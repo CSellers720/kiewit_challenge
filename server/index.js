@@ -4,7 +4,7 @@ const path = require('path');
 const data = require('../data/index.js');
 
 const app = express();
-const PORT = 80;
+const PORT = 3030;
 const staticPath = path.resolve(__dirname, '..', 'client', 'dist');
 
 app.use(express.json());
@@ -19,7 +19,7 @@ app.get('/get', (req, res) => {
   }
 });
 
-app.listen(PORT, 'localhost', (err) => {
+app.listen(process.env.PORT || PORT, 'localhost', (err) => {
   if (err) {
     console.log('Error at server/index.js: listener');
   } else {
