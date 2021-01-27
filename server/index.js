@@ -4,7 +4,7 @@ const path = require('path');
 const data = require('../data/index.js');
 
 const app = express();
-const PORT = 3030;
+const PORT = 80;
 const staticPath = path.resolve(__dirname, '..', 'client', 'dist');
 
 app.use(express.json());
