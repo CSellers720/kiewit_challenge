@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import Title from './Title.jsx';
+import Form from './Form.jsx';
+//import Display from './Display.jsx';
 
 const App = () => {
   const [nameQuery, setNameQuery] = useState('');
@@ -7,7 +10,9 @@ const App = () => {
 
   return (
     <div className="appDiv">
-      TEST
+      <Title />
+      <Form setters={{ setNameQuery, setDptFilter, setAgeFilter }} />
+      {/* <Display /> */}
     </div>
   );
 };
