@@ -8,4 +8,5 @@ This application was created to retrieve and display employee records. It suppor
 
 Once you've started the server locally, navigate to localhost at the port specified in server/index.js in your web browser.
 
-If this were a larger scale project, I'd build out a docker container for a DBMS isntance and have my service query that instead of just using example data. I decided against it in this case as using a database would require extra setup for the user.
+### Notes
+If this were a larger scale project, I'd build out a docker container for a DBMS isntance and have my service query that instead of just using example data. I decided against it in this case as using a database would require significantly more setup for the person reviewing my code.
