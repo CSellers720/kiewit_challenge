@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
 const Form = ({
   setAgeFilter, setDptFilter, setResults
@@ -13,7 +14,6 @@ const Form = ({
     axios.get('/get', { params })
       .then((data) => {
         setResults(data.data);
-        // setResults(data);
       })
       .catch((err) => {
         // eslint-disable-next-line no-console
@@ -52,6 +52,12 @@ const Form = ({
       </form>
     </div>
   );
+};
+
+Form.propTypes = {
+  setAgeFilter: PropTypes.func.isRequired,
+  setDptFilter: PropTypes.func.isRequired,
+  setResults: PropTypes.func.isRequired,
 };
 
 export default Form;
