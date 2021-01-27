@@ -1,4 +1,5 @@
 import React from 'react';
+import DisplayPanel from './DisplayPanel.jsx';
 
 const filterByAge = (array, filter) => {
   if (filter > 0) {
@@ -16,30 +17,15 @@ const filterByDpt = (array, filter) => {
 
 const Display = ({ results, dptFilter, ageFilter }) => {
   const ageFiltered = filterByAge(results, ageFilter, 'age');
-  console.log(ageFiltered);
   const dptFiltered = filterByDpt(ageFiltered, dptFilter, 'department');
 
   return dptFiltered.map((result) => (
-    <div className="employeeInfo">
-      <div className="infoDiv">
-        Name:
-        <span className="infoSpan nameSpan">
-          {result.name}
-        </span>
-      </div>
-      <div className="infoDiv">
-        Department:
-        <span className="infoSpan">
-          {result.department}
-        </span>
-      </div>
-      <div className="infoDiv">
-        Age:
-        <span className="infoSpan">
-          {result.age}
-        </span>
-      </div>
-    </div>
+    <DisplayPanel
+      name={result.name}
+      age={result.age}
+      department={result.department}
+      key={result.name + result.department}
+    />
   ));
 };
 
