@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 const express = require('express');
 const path = require('path');
+const data = require('../data/index.js');
 
 const app = express();
 const PORT = 3030;
@@ -8,6 +9,15 @@ const staticPath = path.resolve(__dirname, '..', 'client', 'dist');
 
 app.use(express.json());
 app.use('/', express.static(staticPath));
+
+app.get('/get', (req, res) => {
+  const { name } = req.query;
+  if (name && name.length > 0) {
+    res.end(JSON.stringify(data.getByName(name)));
+  } else {
+    res.end(JSON.stringify(data.getAll()));
+  }
+});
 
 app.listen(PORT, 'localhost', (err) => {
   if (err) {
